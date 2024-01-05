@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: frozenwingspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frozenwingspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: frozenwingspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: frozenwingspipelinesjavascriptdocker 
+          image: liudong.azurecr.io/frozenwingspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
